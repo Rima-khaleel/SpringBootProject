@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
+	
 	@GetMapping("/add/{firstNumber}/{secondNumber}")
-	public double add(@PathVariable double firstNumber, @PathVariable double secondNumber) {
-		return firstNumber + secondNumber;
+	public double addvariables(@PathVariable double firstNumber, @PathVariable double secondNumber) {
+	
+		return Calculator.add(firstNumber, secondNumber);
 
 	}
 
